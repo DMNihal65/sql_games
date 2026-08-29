@@ -1,0 +1,62 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    @apply bg-slate-50 text-slate-900 font-sans antialiased;
+  }
+}
+
+/* Clean scrollbars */
+::-webkit-scrollbar {
+  width: 7px;
+  height: 7px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f5f9;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #cbd5e1;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #94a3b8;
+}
+
+/* Noir Detective scrollbars */
+.noir-scroll::-webkit-scrollbar-track,
+.bg-\[\#141210\] ::-webkit-scrollbar-track,
+.bg-\[\#1c1917\] ::-webkit-scrollbar-track,
+.bg-\[\#fbf7ee\] ::-webkit-scrollbar-track {
+  background: #24201c;
+  border-radius: 4px;
+}
+
+.noir-scroll::-webkit-scrollbar-thumb,
+.bg-\[\#141210\] ::-webkit-scrollbar-thumb,
+.bg-\[\#1c1917\] ::-webkit-scrollbar-thumb,
+.bg-\[\#fbf7ee\] ::-webkit-scrollbar-thumb {
+  background: #574c40;
+  border-radius: 4px;
+}
+
+.noir-scroll::-webkit-scrollbar-thumb:hover,
+.bg-\[\#141210\] ::-webkit-scrollbar-thumb:hover,
+.bg-\[\#1c1917\] ::-webkit-scrollbar-thumb:hover,
+.bg-\[\#fbf7ee\] ::-webkit-scrollbar-thumb:hover {
+  background: #92400e;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: scale(0.98); }
+  to { opacity: 1; transform: scale(1); }
+}
+
+.animate-fadeIn {
+  animation: fadeIn 0.18s ease-out forwards;
+}
